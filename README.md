@@ -31,8 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Run Yelp's detect-secrets
-        uses: Mooncard/detect-secrets-action@v2.0.0
+        uses: danhe/detect-secrets-action@v1.0.0
+
       - name: Commit back .secrets.baseline (if it was missing)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
